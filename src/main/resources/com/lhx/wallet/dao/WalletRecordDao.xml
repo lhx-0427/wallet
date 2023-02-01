@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lhx.wallet.dao.WalletRecordDao">
+          <insert id="save" parameterType="com.lhx.wallet.pojo.WalletRecord">
+                  insert into wallet_record (id,order_id,wallet_id,`type`,target_id,create_time,money)
+                                         values (#{id},#{orderId},#{walletId},#{type},#{targetId},#{createTime},#{money})
+          </insert>
+    <select id="getList" resultType="com.lhx.wallet.pojo.WalletRecord">
+        SELECT
+            id,
+            order_id as orderId,
+            wallet_id as walletId,
+            `type`,
+            target_id as targetId,
+            create_time as createTime,
+            money
+        FROM
+            wallet_record
+    </select>
+</mapper>

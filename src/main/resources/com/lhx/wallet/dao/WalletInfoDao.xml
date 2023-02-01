@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lhx.wallet.dao.WalletInfoDao">
+     <select id="getMoney"  resultType="java.lang.Integer" parameterType="java.lang.String">
+            select wallet_money  from wallet_info  where id=#{id}
+     </select>
+<!-- 发生交易，修改钱包余额 与总支出或总收入-->
+     <update id="moneyChange" parameterType="java.lang.Integer">
+             update wallet_info  set wallet_money=#{walletMoney}
+     </update>
+
+</mapper>
