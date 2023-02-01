@@ -12,7 +12,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @EnableWebMvc
 
 public class WalletApplication {
-//2
+//22
     public static void main(String[] args) {
         SpringApplication.run(WalletApplication.class, args);
     }
